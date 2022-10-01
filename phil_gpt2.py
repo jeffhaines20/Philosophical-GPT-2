@@ -6,10 +6,12 @@ import pandas as pd
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
 import re
+from PIL import Image
 
 st.title('Artificial Philosopher')
 
-st.sidebar.image('../Python/school_of_athens.jpg', use_column_width=True)
+image = Image.open('../Python/school_of_athens.jpg')
+st.sidebar.image(image, use_column_width=True)
 
 st.write('Uses GPT-2 and the Stanford Encyclopedia of Philosophy to generate answers to philosophical questions.')
 tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
