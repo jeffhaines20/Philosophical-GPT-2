@@ -9,6 +9,8 @@ import re
 
 st.title('Artificial Philosopher')
 
+st.sidebar.image('school_of_athens.jpg', use_column_width=True)
+
 st.write('Uses GPT-2 and the Stanford Encyclopedia of Philosophy to generate answers to philosophical questions.')
 tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
 
